@@ -1,27 +1,45 @@
+/*
+Title: Problem Solving and Good Programming Style
+Name: Angie
+Date Created: March 30, 2026
+Date Updated: March 30, 2026
+ */
+
 public class PracticeProblem {
 
 	public static void main(String args[]) {
 
+		System.out.println(getFirstName("John Dull"));
+		System.out.println(getLastName("John Dull"));
+
 	}
 
-	public static void q1() {
-		//Write question 1 code here
-	}
+		//q1	
+		public static String getFirstName(String names) {
 
-	public static void q2() {
-		//Write question 2 code here
-	}
+			String firstName = names.substring(0, names.indexOf(" "));
+			return firstName;
+		}
 
-	public static void q3() {
-		//Write question 3 code here
-	}
+		//q2
+		public static String getLastName(String names) {
 
-	public static void q4() {
-		//Write question 4 code here
-	}
+			String lastName = names.substring((names.indexOf(" ") + 1), (names.length()));
+			return lastName;
+		}
+		
+		//q3
+		public static Boolean isValidName(String names) {
+			String firstName = names.substring(0, names.indexOf(" "));
+			String lastName = names.substring((names.indexOf(" ") + 1), (names.length()));
 
-	public static void q5() {
-		//Write question 5 code here
-	}
+			if ((firstName.length() > 2) && (lastName.length() > 2)) {
+				return True;
+			}
+			return False;
+
+
+
+		}
 
 }
